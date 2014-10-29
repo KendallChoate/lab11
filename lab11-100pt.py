@@ -24,8 +24,8 @@ def animate():
     # Get the x and y co-ordinates of the circle
     x1, y1, x2, y2 = drawpad.coords(circle)
     if x2 > drawpad.winfo_width():
-        #Change direction to a ridiculously high number
-        direction = - 900
+        #Change direction to -801 to be one more than the width (800)
+        direction = - 801
     elif x1 < 0:
         direction = 5
     #Move our oval object by the value of direction
