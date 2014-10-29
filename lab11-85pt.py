@@ -20,11 +20,11 @@ def animate():
     global direction
     # Get the x and y co-ordinates of the circle
     x1, y1, x2, y2 = drawpad.coords(circle)
-    # Reverse the positive and negative signs of the direction to make it go down
-    if x2 > drawpad.winfo_width(): 
-        direction = 1
-    elif x1 < 0:
+    # Change the x's to y's and width to height to make it bounce up and down
+    if y2 > drawpad.winfo_height(): 
         direction = - 1
+    elif y1 < 0:
+        direction = 1
     # Move our oval object by the value of direction
     # Switch the 0 and direction to make it bounce up and down
     drawpad.move(circle, 0, direction)
